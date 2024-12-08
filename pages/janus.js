@@ -22,7 +22,6 @@ export default function Home() {
       dependencies: Janus.useDefaultDependencies({ adapter: adapter }),
       callback: () => {
         const janus = new Janus({
-          //server: 'http://59.187.251.226:58088/janus', // Janus server address
           server: 'http://59.187.251.226:34549/janus',
 
           success: () => {
@@ -98,9 +97,6 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <h1>WebRTC Stream Test Page</h1>
-      <video ref={videoRef} autoPlay playsInline controls />
-    </div>
+      <video ref={videoRef} autoPlay playsInline controls/>
   );
 }
